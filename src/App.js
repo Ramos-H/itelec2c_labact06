@@ -49,6 +49,8 @@ export default function App() {
 
   return (
     <div className="container">
+      {/* Header */}
+      {/* Header not turned into component since it didn't need to be reusable and has no custom logic */}
       <div className="row">
         <div className="col text-center">
           <h1>
@@ -59,6 +61,7 @@ export default function App() {
         </div>
       </div>
       <div className="row g-2 flex-column-reverse flex-md-row">
+        {/* Music List */}
         <div className="col-12 col-md-6">
           <List
             totalMusicCount={musics.length}
@@ -77,6 +80,8 @@ export default function App() {
             <NumberResult count={query ? filteredMusics.length : null} />
           </List>
         </div>
+
+        {/* Playlist */}
         <div className="col-12 col-md-6">
           <List
             musics={playlist}
